@@ -38,16 +38,20 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   // TODO
-  let length = numbers.length;
+  let length = numbers.length
   return length
-}
-
+};
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
   // TODO
+  let sum = 0
+  for (let i=0; i<numbers.length; i++) {
+    sum += numbers[i]
+  }
+  return sum
 }
 
 /**
@@ -64,6 +68,8 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let mean = getSum(numbers)/ getLength(numbers)
+  return mean
 }
 
 /**
@@ -72,6 +78,12 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let minValue = numbers[0]
+  numbers.forEach((item)=>{
+    if(item < minValue)
+      minValue = item
+  })
+  return minValue
 }
 
 /**
@@ -80,6 +92,8 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  let range = getMax(numbers) - getMin(numbers)
+  return range
 }
 
 /**
@@ -88,6 +102,11 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  numbers.forEach((item) => {
+    if(item % 2 === 0)
+    evens.push(item)
+  })
+return evens
 }
 
 /**
@@ -96,4 +115,10 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  const odds = [] 
+  numbers.forEach((item) => {
+    if(item % 2 === 1)
+    odds.push(item)
+  })
+return odds
 }
