@@ -92,6 +92,8 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  let range = getMax(numbers) - getMin(numbers)
+  return range
 }
 
 /**
@@ -100,6 +102,11 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  numbers.forEach((item) => {
+    if(item % 2 === 0)
+    evens.push(item)
+  })
+return evens
 }
 
 /**
@@ -108,4 +115,10 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  const odds = [] 
+  numbers.forEach((item) => {
+    if(item % 2 === 1)
+    odds.push(item)
+  })
+return odds
 }
