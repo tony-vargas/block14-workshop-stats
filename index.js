@@ -38,6 +38,8 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   // TODO
+  let length = numbers.length;
+  return length
 }
 
 /**
