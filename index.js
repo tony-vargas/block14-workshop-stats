@@ -47,6 +47,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+  let sum = 0
+  for (let i=0; i<numbers.length; i++) {
+    sum += numbers[i]
+  }
+  return sum
 }
 
 /**
@@ -63,6 +68,8 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let mean = getSum(numbers)/ getLength(numbers)
+  return mean
 }
 
 /**
@@ -71,6 +78,12 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let minValue = numbers[0]
+  numbers.forEach((item)=>{
+    if(item < minValue)
+      minValue = item
+  })
+  return minValue
 }
 
 /**
